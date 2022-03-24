@@ -1,0 +1,65 @@
+body{
+    margin:0;
+    background-image:url(./image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+h1{
+    margin:0;
+}
+.container{
+    max-width:80vw;
+    padding: 20px;
+    height:90vh;
+    background-color:white;
+    margin:2rem auto;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+.top-menu{
+    /* border:1px solid grey; */
+    padding:10px;
+}
+#user-input{
+    width:60%;
+    height:3vh;
+}
+#add{
+    width:4%;
+    height:3.5vh;
+}
+.task-tab{
+    border:1px solid rgb(218, 218, 218);
+    border-bottom:none;
+    display:flex;
+    padding:15px 0;
+    position:relative;
+}
+.task-tab .under-line{
+    width:40px;
+    height:5px;
+    background-color:#f300e4;
+    position:absolute;
+    left:0;
+    top:47px;
+}
+.task-tab .tab-menu{
+    margin:0 10px;
+    cursor: pointer;
+}
+.taskBoard{
+    border:1px solid rgb(218, 218, 218);
+    overflow-y:scroll;
+}
+.task{
+    padding:15px;
+    display:flex;
+    justify-content: space-between;
+}
+.task-name{
+    margin-left:5px;
+}
+.task-name.task-done{
+    text-decoration: line-through;
+}

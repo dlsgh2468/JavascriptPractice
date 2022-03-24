@@ -1,0 +1,98 @@
+body{
+    padding:0;
+    margin:0;
+}
+.container{
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(74, 100, 216, 0.4);
+}
+.content{
+    width:100%;
+    text-align: center;
+    border-radius: 20px;
+    border:10px solid white;
+    max-width:900px;
+}
+.btn{
+    cursor: pointer;
+}
+input:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgb(255, 26, 26);
+}
+input[type='number']{
+    transition:box-shadow .25s ease-in-out;
+}
+.univ-name{
+    font-size: 5vw;
+    font-weight: bold;
+    color: blue;
+}
+.content h1.title{
+    font-size: 5vh;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+.sub-title{
+    font-size:4vh;
+    font-weight: bold;
+    margin:0 0 10px 0;
+}
+.result-area img{
+    width:20vw;
+    height:20vh;
+}
+.result-area .text{
+    font-size:5vh;
+    font-weight: bold;
+}
+.chance{
+    font-size:4vh;
+}
+/* 사용자 입력 칸 */
+#user-input{
+    height:3vh;
+    font-size:3vh;
+    
+}
+#btn-check{
+    width:100px;
+    height:60px;
+    background-color:green;
+    border-radius: 40px;
+    font-size:3vw;
+    font-weight: bold;
+}
+#btn-reset{
+    width:100px;
+    height:60px;
+    background-color:yellow;
+    border-radius: 40px;
+    font-size:3vw;
+    font-weight: bold;
+}
+@media (max-width:1000px){
+    .content{
+        max-width:800px;
+    }
+}
+@media (max-width:900px){
+    .content{
+        max-width:650px;
+    }
+}
+@media (max-width:680px){
+    .content{
+        max-width:460px;
+    }
+}
+@media (max-width:480px){
+    .content{
+        max-width:350px;
+    }
+}
