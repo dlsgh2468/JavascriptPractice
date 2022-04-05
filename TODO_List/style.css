@@ -23,15 +23,26 @@ h1{
 }
 #user-input{
     width:60%;
-    height:3vh;
+    height:30px;
 }
 #add{
-    width:4%;
-    height:3.5vh;
+    width:40px;
+    height:40px;
+}
+.list-container{
+    max-height:84%;
+    overflow-y:overlay;
+    border-bottom:1px solid rgb(218, 218, 218);
+}
+.list-container::-webkit-scrollbar{
+    width:15px;
+}
+.list-container::-webkit-scrollbar-thumb{
+    background-color: #9b7627af;
+    border-radius: 20px;
 }
 .task-tab{
     border:1px solid rgb(218, 218, 218);
-    border-bottom:none;
     display:flex;
     padding:15px 0;
     position:relative;
@@ -39,27 +50,74 @@ h1{
 .task-tab .under-line{
     width:40px;
     height:5px;
-    background-color:#f300e4;
+    background-color:#60aae7;
     position:absolute;
     left:0;
     top:47px;
+    transition: 0.3s ;
 }
 .task-tab .tab-menu{
-    margin:0 10px;
+    padding:0 10px;
     cursor: pointer;
 }
 .taskBoard{
     border:1px solid rgb(218, 218, 218);
-    overflow-y:scroll;
+    border-top: none;
+    border-bottom:none;
 }
 .task{
-    padding:15px;
     display:flex;
     justify-content: space-between;
 }
 .task-name{
-    margin-left:5px;
+    padding-left:15px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    transition:background-color 0.3s;
 }
 .task-name.task-done{
+    background-color:gray;
     text-decoration: line-through;
+}
+.task .btn-tool{
+    margin-right:20px;
+    height:60px;
+    display:flex;
+}
+.task #check{
+    width: 70px;
+    height: 100%;
+    background: url(./image/check_ico_01.png) no-repeat;
+    background-size: 26px 20px;
+    background-position: center;
+    cursor: pointer;
+    border:0;
+    /* border-left:1px solid rgb(218, 218, 218);
+    border-right:1px solid rgb(218, 218, 218); */
+}
+.task #check.reset{
+    background-image: url(./image/reset_ico_01.webp);
+    background-size:30px 30px;
+}
+.task #check.reset:hover{
+    animation:none;
+}
+@keyframes check-ani {
+    0%{transform:scale(1);}
+    50%{transform:scale(1.5);}
+    0%{transform:scale(1);}
+
+}
+.task #check:hover{
+    animation: check-ani 0.5s 1;
+}
+.task #delete{
+    width: 70px;
+    height: 100%;
+    background: url(./image/delete_ico_01.png) no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    cursor: pointer;
+    border: 0;
 }
