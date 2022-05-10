@@ -65,16 +65,29 @@ function sumNumber() {
 
 let numArr = [1,2,3,4,5];
 
-// numArr.forEach((item) => {console.log(item)});
+numArr.forEach((item) => {console.log(item)});
 
 let data = numArr.map((item) => {
     return item + 'AAA';
 })
+
+// console.log(data);
 
 let filteredData = numArr.filter((item) => {return item >= 3});
 
 // console.log(filteredData);
 
 let findedData = numArr.findIndex((item) => {return item>3});
-console.log(findedData)
+// console.log(findedData)
 
+let object = {
+	name : 'inho',
+    city : {
+        address : 'korea'
+    }
+}
+function print(obj){
+	let {name,city:{address}} = obj;
+    return name +'+'+ address;
+}
+// console.log(print(object));
